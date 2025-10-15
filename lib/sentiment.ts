@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { CONFIG } from "@lib/config";
 import { RawArticle, ScoredArticle } from "@lib/types";
 
-const MODEL_NAME = "gemini-1.5-flash";
+const MODEL_NAME = "gemini-2.5-flash";
 
 function buildPrompt(articles: RawArticle[]): string {
   const items = articles.map((a, i) => `#${i + 1}\nTitle: ${a.title}\nDesc: ${a.description ?? ""}`).join("\n\n");
